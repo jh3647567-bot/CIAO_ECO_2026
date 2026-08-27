@@ -262,3 +262,45 @@ Resposta:
 Ao mudar ELITE para 0, o melhor indivíduo deixa de ser preservado automaticamente para a próxima geração. Por isso, mesmo depois de encontrar uma solução de 20/20 na geração 10, o algoritmo acabou perdendo essa solução nas gerações seguintes. No resultado final, o melhor fitness foi 19/20.
 
 Isso mostra que o elitismo ajuda a preservar as melhores soluções encontradas durante a evolução e evita que uma solução boa seja perdida durante o processo.**
+````markdown
+
+# LAB-03 - Algoritmo Genético
+
+## Problema
+
+Encontrar um valor de `x` no intervalo `[0, 10]` que maximize a função:
+
+```text
+f(x) = x * sin(3x)
+````
+
+## Output da execução
+
+```text
+==================================================
+OTIMIZANDO f(x) = x * sin(3x)
+==================================================
+Geração   0: Melhor f(x) = 8.7280 (x = 8.9804)
+Geração  10: Melhor f(x) = 8.9019 (x = 8.9020)
+Geração  20: Melhor f(x) = 8.9019 (x = 8.9020)
+Geração  30: Melhor f(x) = 8.9019 (x = 8.9020)
+Geração  40: Melhor f(x) = 8.9019 (x = 8.9020)
+
+<img width="1189" height="490" alt="image" src="https://github.com/user-attachments/assets/f0172817-bee4-4e0f-a6ee-6b0ccae218c0" />
+
+ MELHOR SOLUÇÃO: x = 8.9020, f(x) = 8.9019
+```
+
+## Considerações
+
+Nesse laboratório, completamos as funções que estavam faltando no algoritmo genético. Foram implementadas a conversão dos bits para um valor real de `x`, o cálculo do fitness e a mutação dos indivíduos.
+
+O objetivo era encontrar um valor de `x` entre 0 e 10 que maximizasse a função `f(x) = x * sin(3x)`. No início da execução, o melhor resultado encontrado foi `f(x) = 8.7280`, com `x = 8.9804`.
+
+Conforme as gerações foram passando, o algoritmo encontrou uma solução melhor. Na geração 10, chegou a `x = 8.9020`, obtendo `f(x) = 8.9019`. Esse resultado continuou sendo mantido até a geração 40.
+
+Com esse laboratório, entendemos melhor como o algoritmo genético utiliza seleção, crossover, mutação e elitismo para encontrar soluções melhores. Também percebemos que, como estamos utilizando uma representação de 8 bits, o algoritmo encontra uma aproximação do melhor valor possível dentro do intervalo definido.
+
+```
+```
+
