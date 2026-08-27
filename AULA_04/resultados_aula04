@@ -89,7 +89,7 @@ Custo Total (Com Penalizações de SLA): 1160.00 ms
 ============================================================
 ````
 
-### Consideração da dupla/trio
+### Consideração 
 
 Neste exercício, foi implementada uma penalidade de 1000 ms para cada enlace que ultrapassasse o limite de SLA de 50 ms. A rota testada foi `[0 1 2 3 4 5]` e o custo total considerando as penalizações foi de `1160.00 ms`.
 
