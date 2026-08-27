@@ -145,7 +145,7 @@ Geração  40: Melhor = 20/20, Média = 19.63
 MELHOR FITNESS: 20/20
 Ótimo = 20 (todos os bits são 1)
 
-<img width="1188" height="390" alt="image" src="https://github.com/user-attachments/assets/be17f42e-f10b-4815-af9c-037a93c928d0" />
+<img width="1188" height="390" alt="image" src="https://github.com/user-attachments/assets/f13c1f14-c57d-4a4c-ba13-b4c42fa36e6e" />
 
 ### Considerações
 
