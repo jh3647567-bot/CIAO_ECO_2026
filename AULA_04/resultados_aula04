@@ -58,7 +58,7 @@ Tempo de execução: 139.53 ms
 | Elitismo = True  | [4 0 1 6 2 8 9 7 5 3] |     432.63 |   54892.25 |      55324.89 |
 | Elitismo = False | [4 0 1 6 2 8 9 7 5 3] |     432.63 |   54892.25 |      55324.89 |
 
-### Consideração da dupla/trio
+### Consideração 
 
 Nos dois testes realizados, os resultados finais foram iguais. A melhor rota encontrada foi `[4 0 1 6 2 8 9 7 5 3]`, com custo base de `432.63` e fitness final de `55324.89`.
 
@@ -72,3 +72,31 @@ Entendemos que o elitismo serve para preservar a melhor solução encontrada dur
 
 Depois disso, **não precisa mexer nesse arquivo ainda**. Vamos fazer o **Exercício 2**, pegar o output dele e aí acrescentamos a próxima seção no mesmo `.md`.
 ```
+
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAx8AAAHXCAYAAADdgOdVAAAAOnRFWHRTb
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAwUAAAIjCAYAAABS57fmAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjAsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvlHJYcgAAAAlwSFlzAAAPYQAAD2EBqD+naQAA5AtJREFUeJzs3Xdc1dX/wPHXvZfL5bJBUUAUUAScuc29NXOP0spfakMzS81v2TJ3y8psapapZcNKzZUWamo5y5GYMgVxIA5krwv38/vjyk1kCAhcxvv5eNxH3c+678/hCvd9z3mfo1IURUEIIYQQQghRY6ktHYAQQgghhBDCsiQpEEIIIYQQooaTpEAIIYQQQogaTpICIYQQQgghajhJCoQQQgghhKjhJCkQQgghhBCihpOkQAghhBBCiBpOkgIhhBBCCCFqOEkKhBBCCCGEqOEkKRBCiHKgUqmYN29emV0vOjoalUrF6tWry+yaxdGzZ0969uxZoa8phBCi4klSIIQoN6tXr0alUpkfVlZW1KtXjw
+
+## Exercício 2 — Inserção de Penalidades por Descumprimento de SLA
+
+### Resultado
+
+```text
+============================================================
+EXERCÍCIO 2 — PENALIDADE DE SLA
+============================================================
+Rota testada: [0 1 2 3 4 5]
+Custo Total (Com Penalizações de SLA): 1160.00 ms
+============================================================
+````
+
+### Consideração da dupla/trio
+
+Neste exercício, foi implementada uma penalidade de 1000 ms para cada enlace que ultrapassasse o limite de SLA de 50 ms. A rota testada foi `[0 1 2 3 4 5]` e o custo total considerando as penalizações foi de `1160.00 ms`.
+
+Entendemos que a utilização de penalidades faz com que o algoritmo considere não apenas o custo da rota, mas também o cumprimento dos requisitos de qualidade definidos pelo SLA. Dessa forma, uma rota com menor latência pode deixar de ser uma boa opção caso utilize enlaces que ultrapassem o limite estabelecido.
+
+```
+```
+
+
+
