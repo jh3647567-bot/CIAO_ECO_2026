@@ -1,0 +1,74 @@
+
+# AULA 04 — Resultados
+
+## Exercício 1 — Elitismo na estabilidade algorítmica
+
+O objetivo deste exercício foi analisar o efeito do elitismo em um Algoritmo Genético utilizado para encontrar uma rota de menor custo entre os nós.
+
+Foram realizados dois testes: um com elitismo ativado (`True`) e outro com elitismo desativado (`False`).
+
+### Teste 1 — Elitismo ativado
+
+Configuração utilizada:
+
+```text
+USAR_ELITISMO = True
+````
+
+Resultado:
+
+```text
+============================================================
+RESULTADOS — ALGORITMO GENÉTICO
+============================================================
+Melhor rota encontrada: [4 0 1 6 2 8 9 7 5 3]
+Custo base da rota: 432.63
+Penalidade: 54892.25
+Fitness final: 55324.89
+Tempo de execução: 141.61 ms
+============================================================
+```
+
+### Teste 2 — Elitismo desativado
+
+Configuração utilizada:
+
+```text
+USAR_ELITISMO = False
+```
+
+Resultado:
+
+```text
+============================================================
+RESULTADOS — ALGORITMO GENÉTICO
+============================================================
+Melhor rota encontrada: [4 0 1 6 2 8 9 7 5 3]
+Custo base da rota: 432.63
+Penalidade: 54892.25
+Fitness final: 55324.89
+Tempo de execução: 139.53 ms
+============================================================
+```
+
+### Comparação dos resultados
+
+| Configuração     | Melhor rota           | Custo base | Penalidade | Fitness final |
+| ---------------- | --------------------- | ---------: | ---------: | ------------: |
+| Elitismo = True  | [4 0 1 6 2 8 9 7 5 3] |     432.63 |   54892.25 |      55324.89 |
+| Elitismo = False | [4 0 1 6 2 8 9 7 5 3] |     432.63 |   54892.25 |      55324.89 |
+
+### Consideração da dupla/trio
+
+Nos dois testes realizados, os resultados finais foram iguais. A melhor rota encontrada foi `[4 0 1 6 2 8 9 7 5 3]`, com custo base de `432.63` e fitness final de `55324.89`.
+
+A diferença observada foi apenas no tempo de execução. Com elitismo, o tempo foi de `141.61 ms`, enquanto sem elitismo foi de `139.53 ms`.
+
+Entendemos que o elitismo serve para preservar a melhor solução encontrada durante a evolução do algoritmo, evitando que ela seja perdida nas próximas gerações. Porém, neste experimento, a retirada do elitismo não alterou a melhor solução final encontrada. Isso mostra que o comportamento do Algoritmo Genético também depende das configurações utilizadas e da aleatoriedade presente no processo de busca.
+
+```
+
+**Esse é o conteúdo que você deve colocar agora no `resultados_aula04.md`.**
+
+Depois disso, **não precisa mexer nesse arquivo ainda**. Vamos fazer o **Exercício 2**, pegar o output dele e aí acrescentamos a próxima seção no mesmo `.md`.
+```
