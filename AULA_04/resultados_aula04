@@ -1,102 +1,129 @@
+# Resultados — Aula 04
 
-# AULA 04 — Resultados
+## Exercício 1 — Análise do Elitismo
 
-## Exercício 1 — Elitismo na estabilidade algorítmica
+### 1.1 Execução com elitismo
 
-O objetivo deste exercício foi analisar o efeito do elitismo em um Algoritmo Genético utilizado para encontrar uma rota de menor custo entre os nós.
+**Elitismo utilizado:** `True`
 
-Foram realizados dois testes: um com elitismo ativado (`True`) e outro com elitismo desativado (`False`).
+- **Melhor rota:** `[0 4 1 6 9 7 2 8 3 5]`
+- **Custo base:** `290.31`
+- **Penalidade:** `0.00`
+- **Fitness final:** `290.31`
+- **Tempo de execução:** `2212.12 ms`
 
-### Teste 1 — Elitismo ativado
+### 1.2 Execução sem elitismo
 
-Configuração utilizada:
+**Elitismo utilizado:** `False`
 
-```text
-USAR_ELITISMO = True
-````
+- **Melhor rota:** `[8 7 2 9 6 1 4 0 5 3]`
+- **Custo base:** `290.32`
+- **Penalidade:** `0.00`
+- **Fitness final:** `290.32`
+- **Tempo de execução:** `1508.97 ms`
 
-Resultado:
+### Análise
 
-```text
-============================================================
-RESULTADOS — ALGORITMO GENÉTICO
-============================================================
-Melhor rota encontrada: [4 0 1 6 2 8 9 7 5 3]
-Custo base da rota: 432.63
-Penalidade: 54892.25
-Fitness final: 55324.89
-Tempo de execução: 141.61 ms
-============================================================
-```
+Com o elitismo ativado, o melhor indivíduo encontrado é preservado durante as gerações. Nesse teste, foi encontrada uma rota com custo de **290.31**.
 
-### Teste 2 — Elitismo desativado
+Sem o elitismo, o melhor indivíduo não é preservado obrigatoriamente para a próxima geração. Mesmo assim, o algoritmo encontrou uma solução muito próxima, com custo de **290.32**.
 
-Configuração utilizada:
+A diferença entre os resultados foi de apenas **0.01**, mostrando que, neste teste específico, o impacto do elitismo no resultado final foi pequeno. Porém, o elitismo continua sendo importante porque ajuda a evitar que boas soluções sejam perdidas durante a evolução do algoritmo.
 
-```text
-USAR_ELITISMO = False
-```
+---
 
-Resultado:
-
-```text
-============================================================
-RESULTADOS — ALGORITMO GENÉTICO
-============================================================
-Melhor rota encontrada: [4 0 1 6 2 8 9 7 5 3]
-Custo base da rota: 432.63
-Penalidade: 54892.25
-Fitness final: 55324.89
-Tempo de execução: 139.53 ms
-============================================================
-```
-
-### Comparação dos resultados
-
-| Configuração     | Melhor rota           | Custo base | Penalidade | Fitness final |
-| ---------------- | --------------------- | ---------: | ---------: | ------------: |
-| Elitismo = True  | [4 0 1 6 2 8 9 7 5 3] |     432.63 |   54892.25 |      55324.89 |
-| Elitismo = False | [4 0 1 6 2 8 9 7 5 3] |     432.63 |   54892.25 |      55324.89 |
-
-### Consideração 
-
-Nos dois testes realizados, os resultados finais foram iguais. A melhor rota encontrada foi `[4 0 1 6 2 8 9 7 5 3]`, com custo base de `432.63` e fitness final de `55324.89`.
-
-A diferença observada foi apenas no tempo de execução. Com elitismo, o tempo foi de `141.61 ms`, enquanto sem elitismo foi de `139.53 ms`.
-
-Entendemos que o elitismo serve para preservar a melhor solução encontrada durante a evolução do algoritmo, evitando que ela seja perdida nas próximas gerações. Porém, neste experimento, a retirada do elitismo não alterou a melhor solução final encontrada. Isso mostra que o comportamento do Algoritmo Genético também depende das configurações utilizadas e da aleatoriedade presente no processo de busca.
-
-```
-
-**Esse é o conteúdo que você deve colocar agora no `resultados_aula04.md`.**
-
-Depois disso, **não precisa mexer nesse arquivo ainda**. Vamos fazer o **Exercício 2**, pegar o output dele e aí acrescentamos a próxima seção no mesmo `.md`.
-```
-
-data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAx8AAAHXCAYAAADdgOdVAAAAOnRFWHRTb
-data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAwUAAAIjCAYAAABS57fmAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjAsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvlHJYcgAAAAlwSFlzAAAPYQAAD2EBqD+naQAA5AtJREFUeJzs3Xdc1dX/wPHXvZfL5bJBUUAUUAScuc29NXOP0spfakMzS81v2TJ3y8psapapZcNKzZUWamo5y5GYMgVxIA5krwv38/vjyk1kCAhcxvv5eNxH3c+678/hCvd9z3mfo1IURUEIIYQQQghRY6ktHYAQQgghhBDCsiQpEEIIIYQQooaTpEAIIYQQQogaTpICIYQQQgghajhJCoQQQgghhKjhJCkQQgghhBCihpOkQAghhBBCiBpOkgIhhBBCCCFqOEkKhBBCCCGEqOEkKRBCiHKgUqmYN29emV0vOjoalUrF6tWry+yaxdGzZ0969uxZoa8phBCi4klSIIQoN6tXr0alUpkfVlZW1KtXjw
-
-## Exercício 2 — Inserção de Penalidades por Descumprimento de SLA
+## Exercício 2 — Penalidade de SLA
 
 ### Resultado
 
-```text
-============================================================
-EXERCÍCIO 2 — PENALIDADE DE SLA
-============================================================
-Rota testada: [0 1 2 3 4 5]
-Custo Total (Com Penalizações de SLA): 1160.00 ms
-============================================================
-````
+- **Rota testada:** `[0 1 2 3 4 5]`
+- **Limite de SLA:** `50 ms`
+- **Custo total com penalizações:** `1160.00 ms`
 
-### Consideração 
+### Análise
 
-Neste exercício, foi implementada uma penalidade de 1000 ms para cada enlace que ultrapassasse o limite de SLA de 50 ms. A rota testada foi `[0 1 2 3 4 5]` e o custo total considerando as penalizações foi de `1160.00 ms`.
+Foi utilizada a rota `[0 1 2 3 4 5]`, considerando um limite operacional de **50 ms** para a latência de cada enlace.
 
-Entendemos que a utilização de penalidades faz com que o algoritmo considere não apenas o custo da rota, mas também o cumprimento dos requisitos de qualidade definidos pelo SLA. Dessa forma, uma rota com menor latência pode deixar de ser uma boa opção caso utilize enlaces que ultrapassem o limite estabelecido.
+Quando um enlace ultrapassa esse limite, é aplicada uma penalidade de **1000 ms**. Dessa forma, o algoritmo passa a considerar tanto o custo da rota quanto o cumprimento do SLA.
 
-```
-```
+O custo final obtido foi de **1160.00 ms**, já considerando as penalizações dos enlaces que ultrapassaram o limite estabelecido.
 
+---
 
+## Exercício 3 — Balanceamento de Carga em Servidores
 
+### Resultado
+
+**Melhor alocação encontrada:**
+
+`[2 1 2 2 0 3 3 0 0 2 0 3 3 3 1 2 1 2 1 1]`
+
+**Makespan final:** `137.00 segundos`
+
+### Carga por servidor
+
+| Servidor | Carga |
+|----------|------:|
+| Servidor 0 | 134.00 s |
+| Servidor 1 | 136.00 s |
+| Servidor 2 | 134.00 s |
+| Servidor 3 | 137.00 s |
+
+### Distribuição das tarefas
+
+| Servidor | Tarefas | Tempos |
+|----------|---------|--------|
+| 0 | 4, 7, 8, 10 | 15, 45, 60, 14 |
+| 1 | 1, 14, 16, 18, 19 | 35, 25, 42, 5, 29 |
+| 2 | 0, 2, 3, 9, 15, 17 | 12, 40, 8, 31, 33, 10 |
+| 3 | 5, 6, 11, 12, 13 | 22, 19, 28, 50, 18 |
+
+### Análise
+
+O objetivo foi distribuir as 20 tarefas entre 4 servidores, buscando minimizar o **makespan**, que representa o maior tempo de processamento acumulado em um único servidor.
+
+A melhor distribuição encontrada apresentou cargas de **134, 136, 134 e 137 segundos**.
+
+O maior valor foi de **137 segundos**, portanto esse é o makespan final. As cargas ficaram próximas entre os quatro servidores, indicando que o algoritmo conseguiu realizar um bom balanceamento das tarefas.
+
+---
+
+## Desafio de Fechamento — SD-WAN Zero-Trust
+
+### Resultado
+
+- **Origem:** `0`
+- **Destino:** `11`
+- **Melhor rota:** `[0, 11]`
+- **Latência total:** `18.00 ms`
+- **Perda de pacotes:** `4.88 %`
+- **Penalidade de segurança:** `0.00`
+- **Fitness final:** `66.80`
+- **Tempo de execução:** `438.87 ms`
+
+### Reputação dos nós da rota
+
+| Nó | Reputação | Classificação |
+|----|----------:|---------------|
+| 0 | 92.52 | Confiável |
+| 11 | 66.30 | Confiável |
+
+### Relatório técnico
+
+O algoritmo selecionou a rota **[0, 11]**, conectando diretamente o nó de origem 0 ao nó de destino 11.
+
+A rota apresentou **18.00 ms de latência total** e **4.88% de perda de pacotes**, resultando em um **fitness final de 66.80**.
+
+Não foi aplicada penalidade de segurança, pois os dois nós presentes na rota possuem reputação superior a 50. O nó 0 apresentou reputação de **92.52**, enquanto o nó 11 apresentou reputação de **66.30**. Dessa forma, ambos foram classificados como confiáveis.
+
+A escolha da rota direta também evita a passagem por outros nós que poderiam apresentar baixa reputação. Assim, o algoritmo conseguiu encontrar uma rota com baixa latência, perda de pacotes relativamente baixa e sem penalização de segurança.
+
+---
+
+## Consideração Final
+
+Os exercícios da Aula 04 permitiram observar diferentes aplicações de Algoritmos Genéticos em problemas de otimização.
+
+No primeiro exercício, foi possível comparar o comportamento do algoritmo com e sem elitismo. No segundo, foi utilizado um sistema de penalização para representar o cumprimento de um SLA. No terceiro, o algoritmo foi utilizado para distribuir tarefas entre servidores, buscando reduzir o makespan. Por fim, no desafio de fechamento, foram considerados critérios de desempenho e segurança para selecionar uma rota em uma rede SD-WAN.
+
+Os resultados mostram como diferentes estratégias de seleção, penalização e preservação de soluções podem ser utilizadas para encontrar boas soluções para problemas de otimização.
