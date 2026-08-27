@@ -31,6 +31,9 @@ Fitness final: 290.32
 Tempo de execução: 1508.97 ms
 ============================================================
 ```
+<img width="799" height="471" alt="image" src="https://github.com/user-attachments/assets/33fbe0ac-7f73-468d-9afe-7e4fa533275e" />
+<img width="773" height="547" alt="image" src="https://github.com/user-attachments/assets/23037e6f-af88-4c25-8f9c-b61743dc2c80" />
+
 
 ### Considerações
 
@@ -101,6 +104,9 @@ Servidor 3:
 Tarefas: [5, 6, 11, 12, 13]
 Tempos: [22, 19, 28, 50, 18]
 ```
+<img width="850" height="471" alt="image" src="https://github.com/user-attachments/assets/26d679cc-2e55-44ce-8855-54b1c7ad9442" />
+<img width="695" height="470" alt="image" src="https://github.com/user-attachments/assets/772016ba-3444-4ddd-8dc2-4e9391c938ef" />
+
 
 ### Considerações
 
@@ -149,6 +155,10 @@ O nó `0` apresentou reputação de `92.52`, sendo considerado confiável. O nó
 A penalidade de segurança não foi aplicada porque nenhum dos nós pertencentes à rota possui reputação inferior a `50`. Dessa forma, a rota direta foi selecionada por apresentar uma combinação adequada de baixa latência, baixa perda de pacotes e segurança.
 
 O fitness final obtido foi de `66.80`. Nesse caso, o algoritmo conseguiu chegar diretamente ao destino sem precisar passar por outros nós que poderiam apresentar maior risco de segurança ou aumentar a latência da comunicação.
+
+<img width="769" height="759" alt="image" src="https://github.com/user-attachments/assets/1638ebaa-316e-439d-918e-680983ecf9a4" />
+<img width="769" height="759" alt="image" src="https://github.com/user-attachments/assets/5426e604-c4dd-4378-b0ab-2f174aaaafb5" />
+
 
 ### Considerações
 
