@@ -130,9 +130,12 @@ Depois disso, o algoritmo continuou mantendo o melhor indivíduo encontrado nas 
 
 Com esse laboratório, conseguimos entender na prática como um algoritmo genético trabalha com uma população de possíveis soluções e vai evoluindo essas soluções ao longo das gerações até encontrar o melhor resultado.
 
+
 **LAB-02 - ONEMAX
 
 Output da execução
+
+```text
 ==================================================
 ONEMAX - AG com 30 indivíduos, 50 gerações
 ==================================================
@@ -263,9 +266,11 @@ Ao mudar ELITE para 0, o melhor indivíduo deixa de ser preservado automaticamen
 
 Isso mostra que o elitismo ajuda a preservar as melhores soluções encontradas durante a evolução e evita que uma solução boa seja perdida durante o processo.**
 ````markdown
+```
 
 # LAB-03 - Algoritmo Genético
 
+```text
 ## Problema
 
 Encontrar um valor de `x` no intervalo `[0, 10]` que maximize a função:
@@ -285,12 +290,11 @@ Geração  10: Melhor f(x) = 8.9019 (x = 8.9020)
 Geração  20: Melhor f(x) = 8.9019 (x = 8.9020)
 Geração  30: Melhor f(x) = 8.9019 (x = 8.9020)
 Geração  40: Melhor f(x) = 8.9019 (x = 8.9020)
-
+```
 <img width="1189" height="490" alt="image" src="https://github.com/user-attachments/assets/f0172817-bee4-4e0f-a6ee-6b0ccae218c0" />
 
- MELHOR SOLUÇÃO: x = 8.9020, f(x) = 8.9019
-```
-
+MELHOR SOLUÇÃO: x = 8.9020, f(x) = 8.9019
+``` 
 ## Considerações
 
 Nesse laboratório, completamos as funções que estavam faltando no algoritmo genético. Foram implementadas a conversão dos bits para um valor real de `x`, o cálculo do fitness e a mutação dos indivíduos.
