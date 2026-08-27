@@ -129,13 +129,14 @@ Ao longo das gerações, foi possível perceber que as soluções foram melhoran
 Depois disso, o algoritmo continuou mantendo o melhor indivíduo encontrado nas gerações seguintes. No resultado final, o melhor indivíduo foi `[1, 1, 1, 1, 1]`, que representa `x = 31`, obtendo `f(x) = 961` e erro igual a `0`.
 
 Com esse laboratório, conseguimos entender na prática como um algoritmo genético trabalha com uma população de possíveis soluções e vai evoluindo essas soluções ao longo das gerações até encontrar o melhor resultado.
-
-
-**LAB-02 - ONEMAX
+```
+```
+## LAB-02 - ONEMAX
 
 Output da execução
 
-```text
+```
+
 ==================================================
 ONEMAX - AG com 30 indivíduos, 50 gerações
 ==================================================
