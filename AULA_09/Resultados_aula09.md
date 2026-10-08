@@ -25,7 +25,7 @@ Considerações:
 O experimento demonstrou que a lógica fuzzy pode ser utilizada para controlar um sistema de forma gradual. A partir das regras definidas, o controlador transforma a temperatura de entrada em uma velocidade adequada para o ventilador, apresentando resultados coerentes com o aumento da temperatura.
 
 
-# Laboratório 2 — 
+# Laboratório 2 — AULA DE LÓGICA FUZZY
 
 **Gorjeta = 12,5%**
 
