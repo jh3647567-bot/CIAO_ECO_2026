@@ -24,6 +24,90 @@ Também foram gerados os gráficos das funções de pertinência, permitindo vis
 Considerações:
 O experimento demonstrou que a lógica fuzzy pode ser utilizada para controlar um sistema de forma gradual. A partir das regras definidas, o controlador transforma a temperatura de entrada em uma velocidade adequada para o ventilador, apresentando resultados coerentes com o aumento da temperatura.
 
+
+# Laboratório 2 — Ventilador Fuzzy
+
+**Gorjeta = 12,5%**
+
+Apesar da alteração no formato das funções de pertinência e nos gráficos, o resultado final permaneceu igual para essas entradas.
+
+<img width="576" height="434" alt="image" src="https://github.com/user-attachments/assets/d0ec5e00-9e27-4d74-93ca-0e117c9e1492" />
+
+---
+
+## Experimento 3 — Métodos de defuzzificação
+
+Foram comparados três métodos de defuzzificação para as entradas serviço = 7 e comida = 3.
+
+| Método   | Gorjeta |
+| -------- | ------: |
+| Centroid |  12,55% |
+| Bisector |  12,58% |
+| MOM      |  12,75% |
+
+Os três métodos produziram resultados próximos, porém diferentes. O método MOM apresentou o maior resultado, com **12,75%**.
+
+Isso demonstra que diferentes métodos de defuzzificação podem produzir pequenas diferenças no valor final da saída fuzzy.
+
+<img width="576" height="434" alt="image" src="https://github.com/user-attachments/assets/617a5c96-421a-4697-a7bd-89b0577c80a3" />
+
+---
+
+## Experimento 4 — Conjunto "excelente"
+
+Foi adicionado um quarto conjunto fuzzy chamado **excelente** para representar notas muito altas do serviço.
+
+Também foi adicionada a regra:
+
+**Se o serviço for excelente, então a gorjeta será alta.**
+
+Para serviço = 7 e comida = 3, o resultado foi de **12,55%**.
+
+A nova regra não teve influência significativa nesse caso, pois a nota 7 não apresenta uma pertinência relevante no conjunto "excelente".
+
+<img width="576" height="434" alt="image" src="https://github.com/user-attachments/assets/2b1dab67-8aa7-4f10-a38e-eacaccbf2e7e" />
+
+---
+
+## Experimento 5 — Testes com diferentes entradas
+
+Foram realizados testes com três combinações de notas:
+
+| Nota do serviço | Nota da comida | Gorjeta |
+| --------------: | -------------: | ------: |
+|               0 |              0 |   4,33% |
+|              10 |             10 |  21,00% |
+|               5 |              5 |  12,67% |
+
+Os resultados mostram que o sistema apresenta um comportamento coerente. Para notas baixas, a gorjeta tende a ser menor. Para notas altas, a gorjeta aumenta. Para notas intermediárias, o resultado também fica em uma faixa intermediária.
+
+---
+
+## Gráficos das funções de pertinência
+
+Também foram gerados os gráficos das funções de pertinência utilizadas pelo sistema fuzzy, permitindo visualizar as categorias de serviço, comida e gorjeta.
+
+**[COLOCAR AQUI O GRÁFICO DAS FUNÇÕES DE PERTINÊNCIA DO SERVIÇO]**
+
+*Figura 6 — Funções de pertinência utilizadas para a variável serviço.*
+
+**[COLOCAR AQUI O GRÁFICO DAS FUNÇÕES DE PERTINÊNCIA DA COMIDA]**
+
+*Figura 7 — Funções de pertinência utilizadas para a variável comida.*
+
+**[COLOCAR AQUI O GRÁFICO DAS FUNÇÕES DE PERTINÊNCIA DA GORJETA]**
+
+*Figura 8 — Funções de pertinência utilizadas para a variável gorjeta.*
+
+---
+
+## Considerações
+
+O experimento demonstrou como a lógica fuzzy pode ser utilizada para determinar uma gorjeta a partir de avaliações do serviço e da comida. A utilização de conjuntos fuzzy e regras linguísticas permite trabalhar com situações intermediárias, evitando decisões totalmente rígidas.
+
+Os experimentos também mostraram que alterações nas regras, nas funções de pertinência e no método de defuzzificação podem influenciar o resultado do sistema. Mesmo assim, os valores obtidos apresentaram comportamento coerente com as notas fornecidas como entrada.
+
+
 # Laboratório 3: Sistema de Inferência Fuzzy
 
 ## 1. Definição do problema
