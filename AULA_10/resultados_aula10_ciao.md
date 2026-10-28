@@ -38,7 +38,7 @@ A superfície representa a relação entre Impacto, Explorabilidade e Urgência.
 
 O gráfico permite visualizar como o sistema fuzzy combina as duas entradas para produzir uma saída gradual, sem depender somente de limites rígidos.
 
-![Superfície de decisão 3D](superficie_decisao.png)
+<img width="895" height="790" alt="image" src="https://github.com/user-attachments/assets/cc52f852-4a61-417b-a261-fcea937d5444" />
 
 *Figura 1 — Superfície de decisão do sistema fuzzy Mamdani com método MOM.*
 
