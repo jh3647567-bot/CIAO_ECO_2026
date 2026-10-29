@@ -56,16 +56,16 @@ A atividade permitiu desenvolver e testar um sistema de inferência fuzzy, além
 
 ### Execução 1 — Testes funcionais iniciais
 
-Os cinco testes funcionais foram aprovados. Ao adicionar o teste de desempenho, identificou-se um tempo médio inicial de 20,727 ms por inferência, acima do limite de 10 ms.
+Os cinco testes funcionais foram aprovados. Ao adicionar o teste de desempenho, identificou-se um tempo médio inicial de 20,727 ms por inferência, acima do limite de 10 ms estabelecido.
 
 ### Execução 2 — Erro proposital
 
 A condição do teste de desempenho foi alterada temporariamente de `tempo_medio_ms < 10` para `tempo_medio_ms < 0`.
 
-Resultado observado: cinco testes aprovados e um reprovado. O tempo médio medido foi de aproximadamente 0,060 ms por inferência. A falha ocorreu porque o limite foi definido intencionalmente como zero.
+Resultado observado: cinco testes aprovados e um reprovado. O tempo médio medido foi de aproximadamente 0,060 ms por inferência. A falha ocorreu porque o limite foi definido intencionalmente como zero, tornando impossível atender à condição de desempenho.
 
 ### Execução 3 — Correção
 
-A condição original foi restaurada para `tempo_medio_ms < 10`. O motor de inferência otimizado foi mantido, com reutilização do sistema e da simulação.
+A condição original foi restaurada para `tempo_medio_ms < 10`. O motor de inferência otimizado foi mantido, com reutilização do sistema e da simulação por meio de cache.
 
-O resultado final esperado é de seis testes aprovados. O tempo médio deve permanecer abaixo de 10 ms por inferência. O resultado definitivo desta execução deve ser confirmado no terminal de testes.
+O resultado final foi de seis testes aprovados (`6 passed in 1.19s`). O tempo médio medido foi de 0,061 ms por inferência, abaixo do limite de 10 ms definido para o teste de desempenho. Dessa forma, o sistema foi aprovado nos testes funcionais, na validação dos limites de entrada e no teste de desempenho.
